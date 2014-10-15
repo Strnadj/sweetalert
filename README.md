@@ -24,4 +24,4 @@ Alternatively, download the package and reference the JavaScript and CSS files m
 #SASS
 The css is built with the `--style compressed` and `--sourcemap=none` options:
 
-    sass --style compressed --sourcemap=none sweet-alert.scss sweet-alert.css
+    sass --style nested --sourcemap=none --precision 7 sweet-alert.scss sweet-alert.css
