@@ -45,6 +45,12 @@
     position: relative;
     margin: 0;
     line-height: normal; }
+  .sweet-alert input {
+    width: 80%;
+    margin: 20px auto 10px auto;
+    font-size: 16px;
+    text-align: center;
+    height: 20px; }
   .sweet-alert button {
     background-color: #AEDEF4;
     color: white;
@@ -70,7 +76,7 @@
       .sweet-alert button.cancel:active {
         background-color: #b6b6b6; }
       .sweet-alert button.cancel:focus {
-        box-shadow: rgba(197, 205, 211, 0.8) 0px 0px 2px, rgba(0, 0, 0, 0.0470588) 0px 0px 0px 1px inset !important; }
+        box-shadow: rgba(197, 205, 211, 0.8) 0px 0px 2px, rgba(0, 0, 0, 0.04706) 0px 0px 0px 1px inset !important; }
   .sweet-alert[data-has-cancel-button=false] button {
     box-shadow: none !important; }
   .sweet-alert .sweet-icon {
@@ -81,6 +87,42 @@
     margin: 20px auto;
     position: relative;
     box-sizing: content-box; }
+    .sweet-alert .sweet-icon.question {
+      border-color: #C9DAE1; }
+      .sweet-alert .sweet-icon.question > span {
+        position: absolute;
+        display: block; }
+      .sweet-alert .sweet-icon.question .que {
+        width: 24px;
+        height: 17px;
+        top: 10px;
+        left: 23px;
+        border: 5px solid #C9DAE1;
+        border-bottom: 0px;
+        border-radius: 25px 25px 0px 0px; }
+      .sweet-alert .sweet-icon.question .sti {
+        height: 13px;
+        width: 9px;
+        top: 25px;
+        left: 43px;
+        border-right: 5px solid #C9DAE1;
+        border-bottom: 5px solid #C9DAE1;
+        border-radius: 0px 0px 14px 0px; }
+      .sweet-alert .sweet-icon.question .onm {
+        height: 13px;
+        width: 7px;
+        top: 37px;
+        left: 37px;
+        border-top: 5px solid #C9DAE1;
+        border-left: 5px solid #C9DAE1;
+        border-radius: 10px 0px 0px 0px; }
+      .sweet-alert .sweet-icon.question .ark {
+        background-color: #C9DAE1;
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+        top: 62px;
+        left: 37px; }
     .sweet-alert .sweet-icon.error {
       border-color: #F27474; }
       .sweet-alert .sweet-icon.error .x-mark {

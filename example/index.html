@@ -65,6 +65,8 @@
 		<pre>swal(<span class="str">"Here's a message!"</span>)</pre>
 	</li>
 
+
+
 	<li class="title-text">
 		<div class="ui">
 			<p>A title with a text under</p>
@@ -79,6 +81,32 @@
 			<button>Try me!</button>
 		</div>
 		<pre>swal(<span class="str">"Good job!"</span>, <span class="str">"You clicked the button!"</span>, <span class="str">"success"</span>)</pre>
+	</li>
+
+	<li class="input">
+		<div class="ui">
+			<p>A basic input</p>
+			<button>Try me!</button>
+		</div>
+    <pre><span class="func">swal</span>({
+&nbsp;&nbsp;title: <span class="str">"Here's a message!"</span>,
+&nbsp;&nbsp;showInput: <span class="val">true</span>,
+&nbsp;&nbsp;text: <span class="str">"Please provide your name:"</span>,
+&nbsp;&nbsp;inputPlaceHolder: <span class="str">"Your name here..."</span>,
+&nbsp;&nbsp;closeOnConfirm: <span class="val">false</span>,
+&nbsp;&nbsp;showCancelButton: <span class="val">true</span>,
+&nbsp;&nbsp;type: <span class="str">"question"</span>
+&nbsp;},
+&nbsp;&nbsp;<span class="func">function</span>(confirm_status, value) {
+&nbsp;&nbsp;&nbsp;<span class="tag">if</span> (confirm_status) {
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">if</span> (value.length == 0) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="func">swal</span>(<span class="str">"Error!"</span>,  <span class="str">"Please provide your name!"</span>,  <span class="str">"error"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;} <span class="tag">else</span> {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="func">swal</span>(<span class="str">"Hello!"</span>, value + <span class="str">" welcome between us!"</span>,  <span class="str">"success"</span>);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+    });</pre>
 	</li>
 
 	<li class="warning confirm">
@@ -275,6 +303,27 @@ document.querySelector('.showcase.sweet button').onclick = function(){
 
 document.querySelector('ul.examples li.message button').onclick = function(){
 	swal("Here's a message!");
+};
+
+document.querySelector('ul.examples li.input button').onclick = function(){
+  swal({
+    title: "Here's a message!",
+    showInput: true,
+    text: "Please provide your name:",
+    inputPlaceHolder: 'Your name here...',
+    closeOnConfirm: false,
+    showCancelButton: true,
+    type: "question"
+  },
+  function(confirm_status, value) {
+    if (confirm_status) {
+      if (value.length == 0) {
+        swal("Error!", "Please provide your name!", "error");
+      } else {
+        swal("Hello!", value + " welcome between us!", "success");
+      }
+    }
+  });
 };
 
 document.querySelector('ul.examples li.title-text button').onclick = function(){
